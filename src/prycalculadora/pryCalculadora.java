@@ -1,12 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package prycalculadora;
 import java.util.Scanner;
 
 public class pryCalculadora {
     // Métodos definidos a nivel de clase (fuera del main)
+    
     // Método para suma
     static double metSuma(double a, double b) {
         return a + b;
@@ -105,4 +101,3 @@ public class pryCalculadora {
         scanner.close();
     }
 }
-
