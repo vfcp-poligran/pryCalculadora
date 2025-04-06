@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class pryCalculadora {
     // Métodos definidos a nivel de clase (fuera del main)
-    
     // Método para suma
     static double metSuma(double a, double b) {
         return a + b;
