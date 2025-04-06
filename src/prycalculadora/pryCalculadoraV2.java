@@ -1,12 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package prycalculadora;
+
 import java.util.Scanner;
 
-public class pryCalculadora {
-    // Métodos definidos a nivel de clase (fuera del main)
+public class pryCalculadoraV2 {
+    // Variables para almacenar los números (ahora son de clase)
+    static double numero1 = 0;
+    static double numero2 = 0;
+    
+    // Método para ingresar números
+    static void ingresarNumeros(Scanner scanner) {
+        System.out.print("Ingrese el primer número: ");
+        numero1 = scanner.nextDouble();
+        System.out.print("Ingrese el segundo número: ");
+        numero2 = scanner.nextDouble();
+    }
+    
     // Método para suma
     static double metSuma(double a, double b) {
         return a + b;
@@ -26,14 +34,13 @@ public class pryCalculadora {
     static double metDivision(double a, double b) {
         if (b == 0) {
             System.out.println("Error: No se puede dividir por cero");
-            return Double.NaN; // Retorna "Not a Number"
+            return Double.NaN;
         }
         return a / b;
     }
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double numero1 = 0, numero2 = 0;
         int opcion;
         
         do {
@@ -51,10 +58,7 @@ public class pryCalculadora {
             
             switch (opcion) {
                 case 1:
-                    System.out.print("Ingrese el primer número: ");
-                    numero1 = scanner.nextDouble();
-                    System.out.print("Ingrese el segundo número: ");
-                    numero2 = scanner.nextDouble();
+                    ingresarNumeros(scanner);
                     break;
                     
                 case 2:
@@ -105,4 +109,3 @@ public class pryCalculadora {
         scanner.close();
     }
 }
-
